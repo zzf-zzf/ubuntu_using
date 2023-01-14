@@ -14,5 +14,10 @@
 
 对于文件更新或者修改
 修改：
+git init
+git status
+git add 改得文件名称
+git commit -m "备注"
+git push origin 分支名称（如果显示错误：git remote add origin SSH）
 
-新增文件：
+新增文件：同理
