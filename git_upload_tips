@@ -1,0 +1,15 @@
+1.进入github————创建一个库，用于存储项目
+2.进入要上传项目的文件夹，terminal
+3.git init
+4.git add 要上传的文件名   或者  git add ./  ---全部上传
+5.git status 查看文件是否上传状态
+6.git commit -m '文本注释--方便记的名字--与项目相关'
+7.若出现错误，手动添加域名，添加完后再执行第六步
+   git config --global user.email "邮箱地址"
+   git config --global user.name "用户名"
+8.git remote add 名称（远程仓库的名称，自己定） 刚复制的SSH密钥
+9.git remote set-url 名称（远程仓库的名称，自己定） 刚复制的SSH密钥
+10.git push 名称（远程仓库的名称，自己定） master
+11.git push
+
+对于文件更新或者修改
