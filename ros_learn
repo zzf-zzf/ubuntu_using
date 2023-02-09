@@ -1,0 +1,68 @@
+##学习日志：23.04.02 - 23.09.02
+roscore 启动内核
+source ./devel/setup.bash <刷新环境变量，经常执行一下>
+
+1.创建工作空间
+mkdir -p 自定义空间名称/src
+初始化
+cd 自定义的空间名称
+catkin_make
+
+2.进入src创建功能包依赖
+cd src
+catkin_create_pkg 自定义一个ros包名称 依赖包(roscpp rospy ros_msgs.....) -----vscode协助实现，不再需要敲代码
+
+3.添加scripts包并创建py文件
+cd 进入ros工作空间下的src下的功能包，创建新的文件夹‘scripts’
+在新建文件夹中创建py文件，进行编写
+	##py文件：导包（like：rospy），初始化节点（rospy.init_node("自定义")），日志输出rospy.loginfo("输出信息")
+
+4.在创建py文件的目录下添加执行权限
+chmod +x py文件名.py
+
+5.配置ros包下的CamkeList.txt文件
+	catkin_install_python(PROGRAMS
+  	scripts/helloworld_p.py
+  	DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+	)
+	一般在163行
+	
+6.进入工作空间编译
+catkin_make
+
+执行
+新终端：roscore
+工作空间终端下：source ./devel/setup.bash
+rosrun 包名 py文件名
+
+
+rosrun启动单个节点
+
+Launch(xml)(同时启动多个节点):
+1.选定功能包，创建launch文件夹；
+2.在文件夹中创建launch文件；
+3.编辑launch内容，声明需要启动的节点（node:节点；pkg:功能包；type:运行的节点文件；name:给节点命名；output:设置日志的输出目标，"screen"）；
+4.运行（roslaunch 包名 launch文件名）.
+运行前ctrl+s保存下
+
+
+
+一些常用命令：
+sudo apt install xxx <安装ros功能包>
+sudo apt purge xxx <删除功能包>
+rospack list <列出所有功能包>
+rospack find 包名 <查找某个功能包是否存在(本地)，若存在，返回路径>
+roscd 包名 <进入功能包>
+rosls 包名 <列出功能包下的文件>
+apt search ros-noetic-* | grep -i xxx <搜索功能包，在网络上>
+rosed 包名 修改文件名 <修改功能包文件>
+rosrun rqt_graph rqt_graph <显示计算图>
+
+
+##通信部分
+
+
+
+
+
+

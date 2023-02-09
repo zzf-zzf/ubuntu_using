@@ -1,4 +1,4 @@
-ggcnn_simulation: main
+GGCNN_simulation: main
 ggcnn_reproduce: master
 pybullet_project: master
 ubuntu_using: master
