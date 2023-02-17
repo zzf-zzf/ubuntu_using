@@ -60,6 +60,57 @@ rosrun rqt_graph rqt_graph <显示计算图>
 
 
 ##通信部分
+1.话题通信
+master(根据话题建立订阅者和发布者连接)，talker，listener
+talker(话题+RPC)----->master<-----listener(话题)
+master(RPC)----->listener
+listener----->talker(TCP)----->listener
+最后，talker通过TCP正常通信listener
+RPC和TCP协议，发布方和订阅方可存在多个，当两者最后通过TCP建立连接后，master失去作用
+大部分实现已经封装，我们只需要关注：话题设置，发布者实现，订阅者实现，消息载体
+
+命令：rostopic echo 话题名称
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
