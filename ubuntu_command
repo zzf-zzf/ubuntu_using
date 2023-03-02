@@ -3,3 +3,4 @@ ctrl+shift+n    在目前位置打开新的终端
 ctrl+alt+t      打开新的终端
 ctrl+h          隐藏文件
 cd 按两次TAB    出现文件目录
+sudo -i         root用户
