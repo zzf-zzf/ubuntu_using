@@ -21,3 +21,7 @@ git commit -m "备注"
 git push origin 分支名称（如果显示错误：git remote add origin SSH）
 
 新增文件：同理
+
+若想移除现有远程库：
+git remote -v
+git remote remove origin(根据实际分支名称)
